@@ -12934,7 +12934,26 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <p><strong>Answer: </strong></p>
 <p>Among three supervised learning models Adaboost uses the features we have in the data to create a group of learners and builds a set of rules that can predict income. The Adaboost algorithm trains using multiple rounds and it prioritizes the correct prediction of previous instances in the next round of training. Eventually, the model finds the best learner and then all the learners are combined into a final group.</p>
 <ul>
-<li>Reference(s) : 1) <a href="https://en.wikipedia.org/wiki/Boosting_(machine_learning">https://en.wikipedia.org/wiki/Boosting_(machine_learning</a>)</li>
+<li>AdaBoost takes a sample of the training dataset and tests to see how accurate each learner is. The end result is we find the best learner.</li>
+<li>samples that are misclassified are given a heavier weight, so that they have a higher chance of being picked in the next round.</li>
+<li>the best learner is also given a weight depending on its accuracy and incorporated into the ensemble of learners </li>
+<li>AdaBoost again attempts to look for the best learner.</li>
+<li>The sample of patient training data is now influenced by the more heavily misclassified weights. </li>
+<li>In other words, previously misclassified patients have a higher chance of showing up in the sample.</li>
+<li>It’s like getting to the second level of a video game and not having to start all over again when your character is killed. Instead, you start at level 2 and focus all your efforts on getting to level 3.
+-Likewise, the first learner likely classified some patients correctly. Instead of trying to classify them again, let’s focus all the efforts on getting the misclassified patients.</li>
+<li>The best learner is again weighted and incorporated into the ensemble, misclassified patients are weighted so they have a -  higher chance of being picked and we rinse and repeat.</li>
+<li>We’re left with an ensemble of weighted learners trained and then repeatedly retrained on misclassified data from the previous rounds.</li>
+<li>AdaBoost is simple. The algorithm is relatively straight-forward to program.</li>
+<li>it’s fast! Weak learners are generally simpler than strong learners. Being simpler means they’ll likely execute faster.</li>
+</ul>
+<h3 id="Yet-another-example">Yet another example<a class="anchor-link" href="#Yet-another-example">&#182;</a></h3><p>Let’s say you are a horse-racing gambler and your aim is to maximize your winnings. You decide to create a computer program that will accurately predict the winner of a horse race based on the usual information. This information can be the number of races recently won by each horse, weather conditions, betting odds for each horse, etc. Your program will take all these parameters into account and predict the winner for each race. To create such a program, you will ask a highly successful gambler to explain his betting strategy. But somehow, the expert is unable to articulate a grand set of rules for selecting a horse. He just considers all these factors subconsciously and goes with the best guess.</p>
+<p>horse racingWhen you present all the data for a specific set of races, the expert can easily come up with a rule of thumb for that set of races. For example, he can ask you to bet on the horse that has recently won the most races, or may be bet on the horse with the most favored odds. Again, such a rule of thumb is obviously very rough and inaccurate by itself. It is not unreasonable to expect it to provide predictions that are at least a little bit better than random guessing. If you keep asking the expert’s opinion on different collections of races, you can extract many rules of thumb. Now if your program takes all these rules of thumb into account, there is a much better chance of coming up with a good predictor. Right?</p>
+<ul>
+<li>Reference(s) : </li>
+<li>1) <a href="https://en.wikipedia.org/wiki/Boosting_(machine_learning">https://en.wikipedia.org/wiki/Boosting_(machine_learning</a>)</li>
+<li>2) <a href="https://hackerbits.com/data/adaboost-data-mining-algorithm/">https://hackerbits.com/data/adaboost-data-mining-algorithm/</a></li>
+<li>3) <a href="https://prateekvjoshi.com/2014/05/05/what-is-adaboost/">https://prateekvjoshi.com/2014/05/05/what-is-adaboost/</a></li>
 </ul>
 
 </div>
